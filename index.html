@@ -8,11 +8,9 @@
   <meta name="keywords" content="Digital Marketing, Google Ads, AI Tools, NexVoro, SEO, PPC, Portfolio" />
   <meta name="author" content="Muhammad Waqas Khan" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- for give favicon icon-->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-  <!-- Embedded favicon: simple NexVoro 'N' monogram (data URI SVG) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300e0ff'/%3E%3Cstop offset='1' stop-color='%237c4dff'/%3E%3C/linearGradient%3E%3Crect width='100' height='100' rx='20' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-family='Poppins, sans-serif' font-size='52' text-anchor='middle' fill='white' font-weight='700'%3EN%3C/text%3E%3C/svg%3E" />
+  <!-- Favicon (embedded svg as data URI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300e0ff'/%3E%3Cstop offset='1' stop-color='%237c4dff'/%3E%3C/linearGradient%3E%3Crect width='100' height='100' rx='18' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-family='Poppins, sans-serif' font-size='52' text-anchor='middle' fill='white' font-weight='700'%3EN%3C/text%3E%3C/svg%3E" />
 
   <style>
     :root{
@@ -23,7 +21,7 @@
       --muted: #9fb0bf;
       --card: rgba(255,255,255,0.03);
       --glass: rgba(255,255,255,0.03);
-      --radius: 14px;
+      --radius: 12px;
       --maxW: 1100px;
     }
     *{box-sizing:border-box}
@@ -36,34 +34,32 @@
       -webkit-font-smoothing:antialiased;
       scroll-behavior:smooth;
       line-height:1.5;
-      -webkit-font-smoothing:antialiased;
     }
 
     .container{
       max-width:var(--maxW);
-      margin:0 auto;
-      padding:28px 20px 60px;
+      margin:18px auto 48px;
+      padding:20px;
     }
 
     /* Header */
     header{
       display:flex;
-      gap:24px;
+      gap:20px;
       align-items:center;
-      padding:28px;
-      border-radius:16px;
+      padding:18px;
+      border-radius:12px;
       background: linear-gradient(135deg, rgba(124,77,255,0.06), rgba(0,224,255,0.04));
-      box-shadow: 0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
-      margin-top:18px;
+      box-shadow: 0 8px 40px rgba(2,6,23,0.6);
       backdrop-filter: blur(6px);
       position:sticky;
-      top:14px;
+      top:12px;
       z-index:20;
     }
 
-    /* Profile picture */
+    /* Profile */
     .profile-wrap{
-      width:140px;
+      width:140px; /* MEDIUM size */
       height:140px;
       border-radius:50%;
       display:flex;
@@ -71,36 +67,23 @@
       justify-content:center;
       background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border: 2px solid rgba(255,255,255,0.04);
-      position:relative;
       overflow:hidden;
-      cursor:default;
-      transition: transform .25s ease;
-    }
-    .profile-wrap::before{
-      content:"";
-      position:absolute;
-      inset: -40%;
-      background: radial-gradient(circle at 20% 20%, rgba(0,224,255,0.06), transparent 8%),
-                  radial-gradient(circle at 80% 80%, rgba(124,77,255,0.04), transparent 10%);
-      transform: rotate(25deg);
-      transition: transform .9s ease;
+      position:relative;
     }
     .profile-img{
-      width:128px;
-      height:128px;
+      width:132px;
+      height:132px;
       border-radius:50%;
-      background: url('https://via.placeholder.com/400') center/cover no-repeat;
+      background: url('https://raw.githubusercontent.com/nexwaqas/portfolio/main/waqas_dm.png') center/cover no-repeat;
       border: 3px solid rgba(255,255,255,0.04);
-      box-shadow: 0 6px 30px rgba(124,77,255,0.06);
-      transform: translateZ(0);
+      box-shadow: 0 12px 40px rgba(124,77,255,0.06);
       transition: transform .35s ease;
     }
-    .profile-wrap:hover{ transform: translateY(-6px) scale(1.02); }
-    .profile-wrap:hover .profile-img{ transform: translateY(-6px) rotate(-1.2deg) scale(1.02); }
+    .profile-wrap:hover .profile-img{ transform: translateY(-6px) rotate(-1deg) scale(1.02); }
 
     .intro{ flex:1; min-width:0; }
     .intro h1{
-      font-size:1.7rem;
+      font-size:1.6rem;
       margin:0 0 6px 0;
       color: transparent;
       background: linear-gradient(90deg, var(--neon-a), var(--neon-b));
@@ -108,43 +91,41 @@
       background-clip: text;
       letter-spacing:0.3px;
     }
-    .role{ font-weight:600; color:var(--muted); display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+    .role{ font-weight:600; color:var(--muted); display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px; }
 
     .typed{ color:#eafcff; font-weight:600; display:inline-block; min-height:22px; }
 
-    .neon-line{ height:4px; width:80px; border-radius:999px; background: linear-gradient(90deg, var(--neon-a), var(--neon-b)); margin:14px 0; box-shadow: 0 6px 30px rgba(124,77,255,0.08), 0 6px 40px rgba(0,224,255,0.06); }
+    .neon-line{ height:4px; width:80px; border-radius:999px; background: linear-gradient(90deg, var(--neon-a), var(--neon-b)); margin:12px 0; box-shadow: 0 8px 30px rgba(124,77,255,0.08); }
 
     /* Header actions */
-    .actions{ margin-top:10px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .actions{ margin-top:6px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
     .btn{
       text-decoration:none; padding:10px 16px; border-radius:999px; font-weight:600; font-size:.95rem;
       display:inline-flex; align-items:center; gap:10px; transition: transform .18s ease, box-shadow .18s ease;
       border: 1px solid rgba(255,255,255,0.03);
-      background: linear-gradient(90deg, rgba(0,224,255,0.08), rgba(124,77,255,0.06));
-      color:#eafcff; box-shadow: 0 6px 20px rgba(3,6,20,0.6);
+      background: linear-gradient(90deg, rgba(0,224,255,0.06), rgba(124,77,255,0.04));
+      color:#eafcff; box-shadow: 0 8px 30px rgba(3,6,20,0.6);
     }
-    .btn.secondary{ background: transparent; color:var(--neon-a); border: 1px solid rgba(0,224,255,0.12); text-shadow: 0 0 6px rgba(0,224,255,0.06); }
-    .btn:hover{ transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
+    .btn.secondary{ background: transparent; color:var(--neon-a); border: 1px solid rgba(0,224,255,0.12); }
+    .btn:hover{ transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
 
-    /* Main sections */
-    .main{ margin-top:20px; display:grid; gap:26px; }
-    .card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px; border-radius: var(--radius); border:1px solid rgba(255,255,255,0.02); box-shadow: 0 8px 30px rgba(2,6,23,0.6); opacity:0; transform:translateY(18px); transition: all .6s cubic-bezier(.2,.9,.2,1); }
+    /* Main */
+    .main{ margin-top:18px; display:grid; gap:20px; }
+    .card{ background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius: var(--radius); border:1px solid rgba(255,255,255,0.02); box-shadow: 0 10px 30px rgba(2,6,23,0.6); opacity:0; transform:translateY(18px); transition: all .6s cubic-bezier(.2,.9,.2,1); }
     .card.revealed{ opacity:1; transform:translateY(0); }
-    .card h3{ margin:0 0 10px 0; color:#ecf9ff; display:flex; align-items:center; gap:10px; }
-    .muted{ color:var(--muted); font-weight:500; }
+    .card h3{ margin:0 0 8px 0; color:#ecf9ff; }
+    .muted{ color:var(--muted); }
 
-    /* Skills grid */
-    .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin-top:8px; }
+    /* Skills */
+    .skills-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:12px; margin-top:8px; }
     .skill{ background:var(--glass); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); font-weight:700; color:#eafcff; text-align:center; }
 
     /* Projects */
     .projects{ display:grid; gap:12px; margin-top:8px; }
     .project-card{ padding:12px; border-radius:10px; background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); display:flex; justify-content:space-between; gap:12px; align-items:center; border:1px solid rgba(255,255,255,0.02); transition: transform .22s ease, box-shadow .22s ease; }
-    .project-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
-    .project-info h4{ margin:0 0 6px 0; }
-    .project-info p{ margin:0; color:var(--muted); font-size:.95rem; }
+    .project-card:hover{ transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
 
-    /* Contact form */
+    /* Contact grid */
     .contact-grid{ display:grid; grid-template-columns: 1fr 360px; gap:18px; align-items:start; }
     .contact-form{ display:flex; flex-direction:column; gap:12px; }
     .form-row{ display:flex; gap:10px; }
@@ -158,31 +139,27 @@
     .btn-primary{ background: linear-gradient(90deg,var(--neon-a),var(--neon-b)); color:#061025; padding:10px 16px; border-radius:10px; border:none; cursor:pointer; font-weight:700; }
     .btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
 
-    /* Contact info column */
     .contact-info{ background: rgba(255,255,255,0.02); padding:14px; border-radius:10px; border:1px solid rgba(255,255,255,0.02); }
-    .contact-item{ display:flex; gap:10px; align-items:center; color:var(--muted); font-weight:700; }
+    .contact-item{ display:flex; gap:10px; align-items:center; color:var(--muted); font-weight:700; margin-bottom:8px; }
 
-    /* Footer */
-    footer{ margin-top:26px; padding:18px; border-radius:12px; text-align:center; color:#94a1b2; font-size:.95rem; background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.02); }
+    footer{ margin-top:20px; padding:16px; border-radius:10px; text-align:center; color:#94a1b2; font-size:.95rem; background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.02); }
 
-    /* Layout responsiveness */
+    /* small screens */
     @media (max-width:980px){ .contact-grid{ grid-template-columns: 1fr; } }
     @media (max-width:720px){
-      header{ flex-direction:column; text-align:center; gap:12px; padding:20px; }
+      header{ flex-direction:column; text-align:center; gap:12px; padding:14px; }
       .profile-wrap{ width:120px; height:120px; }
       .profile-img{ width:110px; height:110px; }
-      .intro h1{ font-size:1.3rem; }
+      .intro h1{ font-size:1.2rem; }
     }
 
-    /* Small animation helpers */
+    /* animations */
     .fade-in{ animation: fadeIn .9s ease both; }
     @keyframes fadeIn { from{ opacity:0; transform:translateY(12px);} to{ opacity:1; transform:none; } }
+
     a { color:inherit; }
     .social-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:8px; }
-
-    /* icon button style */
     .icon-btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:10px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.02); text-decoration:none; color:var(--neon-a); font-weight:700; }
-
   </style>
 </head>
 <body>
@@ -267,13 +244,13 @@
             <textarea id="message" name="message" placeholder="Your message" required aria-required="true"></textarea>
             <div class="form-actions">
               <button type="submit" class="btn-primary">Send Message</button>
-              <div class="form-note muted">Or email: <strong id="emailText">waqas.khan.services@mail.com</strong></div>
+              <div class="form-note muted">Or email: <strong id="emailText">waqas.khan.services@gmail.com</strong></div>
             </div>
             <div id="formStatus" aria-live="polite" style="margin-top:8px;"></div>
           </form>
 
           <div class="contact-info" aria-label="Contact information">
-            <div class="contact-item"><strong>Email:</strong>&nbsp;<span class="muted" id="emailCol">waqas.khan.services@mail.com</span></div>
+            <div class="contact-item"><strong>Email:</strong>&nbsp;<span class="muted" id="emailCol">waqas.khan.services@gmail.com</span></div>
             <div class="contact-item"><strong>LinkedIn:</strong>&nbsp;<a class="muted" href="https://www.linkedin.com/in/waqas-khan-0377b8391/" target="_blank" rel="noopener noreferrer">waqas-khan-0377b8391</a></div>
             <div class="contact-item"><strong>GitHub:</strong>&nbsp;<a class="muted" href="https://github.com/nexwaqas" target="_blank" rel="noopener noreferrer">nexwaqas</a></div>
             <div style="margin-top:12px;">
@@ -288,18 +265,6 @@
         </div>
 
       </section>
-    <!-- 🌟 Hero Section with Profile Image -->
-<section id="hero" style="text-align:center; padding:60px 20px; background:linear-gradient(135deg, #0A1E3D, #003366); color:white;">
-  <img src="https://raw.githubusercontent.com/nexwaqas/portfolio/main/A_digital_graphic_design_image_features_Muhammad_waqas_dm.png"
-       alt="Muhammad Waqas Khan"
-       style="width:180px; height:180px; border-radius:50%; object-fit:cover; box-shadow:0 0 20px rgba(0,0,0,0.4); margin-bottom:20px; border:3px solid #00AEEF;">
-  <h1 style="font-family:Poppins, sans-serif; font-size:32px; margin-bottom:10px;">Muhammad Waqas Khan</h1>
-  <h3 style="font-weight:400; color:#00AEEF;">Digital Marketer | AI Tools Enthusiast | PITP Trainee</h3>
-  <p style="max-width:600px; margin:15px auto 0; font-size:15px; line-height:1.6; color:#e0e0e0;">
-    Passionate about blending creativity with AI-powered marketing tools to craft impactful digital strategies.
-  </p>
-</section>
-
     </main>
 
     <footer role="contentinfo">
@@ -308,8 +273,8 @@
   </div>
 
   <script>
-    /* ---------- Config: change if needed ---------- */
-    const FORM_ENDPOINT = ''; // optional: add Formspree/Netlify form endpoint (leave empty to use mailto fallback)
+    /* ---------- Config ---------- */
+    const FORM_ENDPOINT = ''; // Optional: add Formspree/Netlify endpoint if you want server form submissions
 
     /* ---------- Typing animation ---------- */
     (function typing(){
@@ -324,18 +289,18 @@
         const current = phrases[pIndex];
         if (forward) {
           charIndex++;
-          if (charIndex > current.length) { forward = false; setTimeout(tick, 1100); return; }
+          if (charIndex > current.length) { forward = false; setTimeout(tick, 1000); return; }
         } else {
           charIndex--;
-          if (charIndex < 0) { forward = true; pIndex = (pIndex + 1) % phrases.length; setTimeout(tick, 400); return; }
+          if (charIndex < 0) { forward = true; pIndex = (pIndex + 1) % phrases.length; setTimeout(tick, 300); return; }
         }
         el.textContent = current.slice(0, charIndex);
-        setTimeout(tick, forward ? 60 : 25);
+        setTimeout(tick, forward ? 50 : 25);
       }
       tick();
     })();
 
-    /* ---------- Reveal on scroll using IntersectionObserver ---------- */
+    /* ---------- Reveal on scroll ---------- */
     (function revealOnScroll(){
       const items = document.querySelectorAll('.card');
       const obs = new IntersectionObserver((entries, observer) => {
@@ -352,7 +317,7 @@
     /* ---------- Footer year ---------- */
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    /* ---------- Small tilt for profile ---------- */
+    /* ---------- Profile tilt small effect ---------- */
     (function profileTilt(){
       const wrap = document.getElementById('profileWrap');
       const img  = document.getElementById('profileImg');
@@ -360,8 +325,8 @@
         const rect = wrap.getBoundingClientRect();
         const x = (e.clientX - rect.left) / rect.width - 0.5;
         const y = (e.clientY - rect.top) / rect.height - 0.5;
-        const rx = y * 8;
-        const ry = x * -8;
+        const rx = y * 6;
+        const ry = x * -6;
         img.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateZ(6px)`;
       }
       function handleLeave(){ img.style.transform = 'rotateX(0) rotateY(0) translateZ(0)'; }
@@ -371,7 +336,7 @@
       wrap.addEventListener('touchend', handleLeave);
     })();
 
-    /* ---------- Smooth anchor fallback ---------- */
+    /* ---------- Smooth anchors ---------- */
     (function smoothAnchors(){
       const links = document.querySelectorAll('a[href^="#"]');
       links.forEach(a => {
@@ -381,19 +346,6 @@
         });
       });
     })();
-
-    /* ---------- Quick placeholder replacement ---------- 
-    (function replacePlaceholders(){
-      const profileUrl = 'https://github.com/nexwaqas/portfolio/blob/main/waqas_khan.png?raw=true'; // change to your uploaded image url
-      document.getElementById('profileImg').style.backgroundImage = `url('${profileUrl}')`;
-    })();*/
-    /* ---------- Quick placeholder replacement ---------- */
-(function replacePlaceholders(){
-  // Apna uploaded GitHub image ka direct link (ye automatically load hoga)
-  const profileUrl = 'https://raw.githubusercontent.com/nexwaqas/portfolio/main/A_digital_graphic_design_image_features_waqas_dm.png';
-  document.getElementById('profileImg').style.backgroundImage = `url('${profileUrl}')`;
-})();
-
 
     /* ---------- Contact form handling (mailto fallback) ---------- */
     (function contactForm(){
@@ -410,7 +362,6 @@
           status.style.color = '#ffb3b3';
           return;
         }
-        // If FORM_ENDPOINT provided, submit via fetch (for Formspree/Netlify)
         if (FORM_ENDPOINT) {
           fetch(FORM_ENDPOINT, {
             method: 'POST',
@@ -427,10 +378,9 @@
             }
           }).catch(()=> { status.textContent = 'Network error — try email.'; status.style.color = '#ffb3b3'; });
         } else {
-          // mailto fallback
           const subject = encodeURIComponent(`Portfolio message from ${name}`);
           const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-          const mailto = `mailto:waqas.khan.services@mail.com?subject=${subject}&body=${body}`;
+          const mailto = `mailto:waqas.khan.services@gmail.com?subject=${subject}&body=${body}`;
           window.location.href = mailto;
           status.textContent = 'Opening your email client...';
           status.style.color = '#a8ffde';
@@ -442,14 +392,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
