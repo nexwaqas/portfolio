@@ -147,12 +147,47 @@
 
     /* small screens */
     @media (max-width:980px){ .contact-grid{ grid-template-columns: 1fr; } }
-    @media (max-width:720px){
-      header{ flex-direction:column; text-align:center; gap:12px; padding:14px; }
-      .profile-wrap{ width:120px; height:120px; }
-      .profile-img{ width:110px; height:110px; }
-      .intro h1{ font-size:1.2rem; }
-    }
+   @media (max-width:720px){
+  header{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro h1{
+    font-size:1.25rem;
+    text-align:center;
+  }
+
+  .role{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .actions{
+    justify-content:center;
+  }
+
+  .profile-wrap{
+    margin: 0 auto;
+    width:120px;
+    height:120px;
+  }
+
+  .profile-img{
+    width:110px;
+    height:110px;
+  }
+}
 
     /* animations */
     .fade-in{ animation: fadeIn .9s ease both; }
@@ -393,6 +428,7 @@
   </script>
 </body>
 </html>
+
 
 
 
